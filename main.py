@@ -3,8 +3,9 @@ import time
 
 def calculadora(num1: float, num2: float, operador: str) -> float:
     """
-    Função para realizar operações matemáticas básicas.
-    Retorna NaN se o operador for inválido.
+    Usar nan como valor inicial é uma boa prática. 
+    Se o operador fornecido não corresponder a nenhuma das opções válidas (+, -, etc.), a função retornará nan, 
+    sinalizando que o cálculo não pôde ser realizado.
     """
     result = float("nan")
     if operador == '+':
