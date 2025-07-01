@@ -52,4 +52,7 @@ if __name__ == "__main__":
             time.sleep(2)
             continue
 
-    print('\nVolte sempre!\n')
+        continuar = input('Deseja continuar? (s/n): ').strip().lower()
+        if continuar != 's':
+            print('\nVolte sempre!\n')
+            break
