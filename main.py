@@ -25,20 +25,31 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
 
 
 if __name__ == "__main__":
-
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         try:
             print('Calculadora')
             print('----------------------------------\n')
 
+            num1 = float(input('Digite o primeiro número: '))
+            num2 = float(input('Digite o segundo número: '))
+            operador = input('Digite o operador (+, -, *, /, ^): ')
+
+            resultado = calculadora(num1, num2, operador)
+
+            if resultado != resultado: 
+                print('\nOperador inválido!\n')
+            else:
+                print(f'\nResultado: {num1} {operador} {num2} = {resultado}\n')
 
         except ValueError:
-            print('Dados inválidos! -> Tente novamente!')
+            print('\nDados inválidos! -> Tente novamente!\n')
             time.sleep(2)
+            continue
 
         except ZeroDivisionError:
-            print('Impossível dividir por zero! -> Tente novamente!')
+            print('\nImpossível dividir por zero! -> Tente novamente!\n')
             time.sleep(2)
+            continue
 
     print('\nVolte sempre!\n')
